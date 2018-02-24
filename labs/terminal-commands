@@ -1,0 +1,2 @@
+# run your rails application
+  rails s -b $IP -p $PORT
