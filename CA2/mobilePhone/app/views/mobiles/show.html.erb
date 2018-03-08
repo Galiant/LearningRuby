@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-12">
+      <p>
+        <strong>Model:</strong>
+        <%= @mobile.model %>
+      </p>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <p>
+        <strong>Description:</strong>
+        <%= @mobile.description %>
+      </p>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12">
+      <p>
+        <strong>Price:</strong>
+        € <%= number_with_precision(@mobile.price, precision:2) %>
+      </p>
+    </div>
+  </div>
+  
+    <div class="row">
+    <div class="col-12">
+      <p>
+        <strong>Image:</strong>
+        <%= @mobile.image %>
+      </p>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-4">
+      <%= link_to 'Edit', edit_mobile_path(@mobile), :class => "btn btn-primary", :role => "button" %>
+      <%= link_to 'Back', mobiles_path, :class => "btn btn-primary", :role => "button" %>
+    </div>
+  </div>
+
+</div>
+
+
+

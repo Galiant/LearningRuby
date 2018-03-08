@@ -1,0 +1,26 @@
+<% provide(:title, 'Home') %>
+
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+    <div class="row">
+    <% @mobiles.each do |mobile| %>
+    
+    <div class="col-md-4">
+    <div class="card">
+        <%= image_tag mobile.image.url, :class => "card-img-top" %>
+        <div class="card-body">
+            <h5 class="card-title"><%= mobile.model %></h5>
+            <p class="card-text"><%= mobile.description %></p>
+            <p class="card-text price">€ <%= number_with_precision(mobile.price, precision: 2) %></p>
+            <div class="text-center">
+            <%= link_to 'View More',  mobile, :class => "btn btn-primary", :role => "button" %>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <% end %>
+    </div>
+    
+</div>

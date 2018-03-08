@@ -1,0 +1,70 @@
+<%= form_with(model: mobile, html: { multipart: true }, local: true) do |form| %>
+  <% if mobile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mobile.errors.count, "error") %> prohibited this mobile from being saved:</h2>
+
+      <ul>
+      <% mobile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="row">
+      <div class="col-3 col-sm-12">
+        <%= form.label :model %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-12">
+    <%= form.text_field :model, id: :mobile_model, :style => "width:40%" %>
+    </div>
+    </div>
+  </div>
+  
+    <div class="field">
+    <div class="row">
+      <div class="col-3 col-sm-12">
+        <%= form.label :description %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-12">
+      <%= form.text_area :description, id: :mobile_description, :style => "width:60%; height:100px" %>
+    </div>
+    </div>
+  </div>
+  
+  <div class="field">
+    <div class="row">
+      <div class="col-3 col-sm-12">
+        <%= form.label :price %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-12">
+    <%= form.text_field :price, id: :mobile_price, :value => (number_with_precision(form.object.price, :precision => 2) || 0) %>
+    </div>
+    </div>
+  </div>
+  
+  <div class="field">
+    <div class="row">
+      <div class="col-3 col-sm-12">
+        <%= form.label :image %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-12">
+    <%= form.file_field :image, id: :mobile_image %>
+    </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :class => "btn btn-primary update" %>
+  </div>
+  
+<% end %>

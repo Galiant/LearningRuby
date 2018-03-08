@@ -1,0 +1,15 @@
+<h1>Editing Mobile</h1>
+
+<%= render 'form', mobile: @mobile %>
+
+<hr>
+
+<div class="row justify-content-between edit-buttons">
+    <div class="col-4">
+      <%= link_to 'Show', @mobile, :class => "btn btn-primary", :role => "button" %>
+      <%= link_to 'Back', mobiles_path, :class => "btn btn-primary", :role => "button" %>
+    </div>
+    <div class="col-2">
+    <%= link_to 'Destroy', @mobile, :class => "btn btn-primary", :role => "button", method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+</div>
