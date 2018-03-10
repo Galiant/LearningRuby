@@ -10,7 +10,7 @@ puts "Enter your price before tax"
 price = sprintf('%.2f', gets.chomp.to_f)
 
 #tax rate is 21%
-taxRate = 0.21
+taxRate = 0.20
 
 #calculate tax
 tax = sprintf('%.2f', price.to_f * taxRate)
