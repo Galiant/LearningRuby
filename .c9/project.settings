@@ -5,11 +5,20 @@
     "build": {
         "@saveall": true
     },
+    "format": {
+        "jsbeautify": {
+            "@formatOnSave": true
+        }
+    },
+    "installer": {
+        "@auto": true
+    },
     "instance": {
         "@automaticShutdown": "30"
     },
     "javascript": {
-        "@formatOnSave": false
+        "@formatOnSave": true,
+        "@use_jsbeautify": true
     },
     "language": {
         "tern_defs": {
