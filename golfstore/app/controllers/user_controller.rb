@@ -9,5 +9,6 @@ class UserController < ApplicationController
     session[:login] = nil
     flash[:notice] = "OK then, goodbye!"
     redirect_to :controller => :items
+    session[:cart] = nil
   end
 end
